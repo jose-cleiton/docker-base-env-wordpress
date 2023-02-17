@@ -1,5 +1,5 @@
 #!/bin/bash
-source /docker/.env
+source /home/jose/dev/docker-base-env-wordpress/docker/.env
 echo "Generating a production DB dump"
 ssh host "mysqldump -h localhost -u $DB_USER -p --add-drop-table $DB_NAME | gzip" > ./bd/prod.sql.gz
 
